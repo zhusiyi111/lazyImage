@@ -148,12 +148,12 @@ LazyLoad.prototype = {
 	            });
 	    for(let i = 0, len = _imgs.length; i < len; ++i){
 	        let __img = $(_imgs[i]);
-	        if(__img.attr(this.param.orgrinalAttr)!==''){
+	        if(__img.attr(this.param.orgrinalAttr)){
 	        	let img = new Image();
 	        	let src = __img.attr(this.param.orgrinalAttr)
 	        	img.src= src;
 				img.onload = (data)=>{
-					
+
 					 __img.attr('src',src).removeAttr(this.param.orgrinalAttr);
 				}
 
