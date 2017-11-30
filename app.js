@@ -22,11 +22,11 @@ app.get('/html/:page',function(req,res,next){
             //200：OK
             res.writeHead(200,{"Content-Type":"text/html"});
             let html = data.toString();
-            html = processImgTag(html);
-            console.log(html);
-            res.write(data.toString());
+            processImgTag(html).then(function(result){
+            	res.end(result);
+            });
+            
         }
-        res.end();
     });
 })
 

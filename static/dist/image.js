@@ -146,6 +146,7 @@ LazyLoad.prototype = {
 	               var __thisTop = $(this).offset().top;
 	               return __thisTop <= __top && __thisTop >= __min && $(this).is(':visible');
 	            });
+
 	    for(let i = 0, len = _imgs.length; i < len; ++i){
 	        let __img = $(_imgs[i]);
 	        if(__img.attr(this.param.orgrinalAttr)){
